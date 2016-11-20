@@ -16,8 +16,10 @@ Notes:
 - Use chef-solo provisioner.
 - Put answers to check-questions into repository's Readme, in Q/A form, use tables whenever needed. 
 
-Check questions:
+#Check questions:
+
 Q: What is cookstyle?
+
 A: Most of the code that is authored when working with Chef is written as Ruby. Just about every file within a cookbook—with few exceptions!—is a Ruby file.
 
 cookstyle is a linting tool based on RuboCop designed to address the following issues:
@@ -32,23 +34,47 @@ cookstyle addresses these issues by:
 
 When a new version of RuboCop is released, an automated process disables new style rules in the default configuration.
 
-Q: What is Berkshelf?
+
+** Q: What is Berkshelf? **
+
 A: Berkshelf is a dependency manager for certain cookbook workflows that is included in the Chef development kit.
 
-Q: Berkshelf commands to:
-   - Create cookbook
-A: $ berks cookbook new_application
+** Q: Berkshelf commands to:
+   - Create cookbook **
+A:
+
+```
+ $ berks cookbook new_application
+
+```
 
 - What is Vagrant?
 - What's Vagrant providers and provisioners?
 - What Vagrant comands to:
-   - run machine.
-   - cleanup vagrant workspace ( reset space to blank )
-   - reprovision already running machine.
-- What is project name that's supports images for test kitchen
-- What's Chef resource?
-- What's Chef resource you're used in your cookbook.
-- How much time it takes to:
+** - run machine. **
+** - cleanup vagrant workspace ( reset space to blank ) ** 
+** - reprovision already running machine. **
+** - What is project name that's supports images for test kitchen **
+
+ Bento
+
+** - What's Chef resource? **
+
+A resource is a statement of configuration policy that:
+
+    Describes the desired state for a configuration item
+    Declares the steps needed to bring that item to the desired state
+    Specifies a resource type—such as package, template, or service
+    Lists additional details (also known as resource properties), as necessary
+    Are grouped into recipes, which describe working configurations
+
+Where a resource represents a piece of the system (and its desired state), a provider defines the steps that are needed to bring that piece of the system from its current state into the desired state.
+
+** - What's Chef resource you're used in your cookbook. **
+
+user, group, file
+
+** - How much time it takes to: **
     - bring machine up for the first time.
     - Re-provision machine.
     - destroy machine.
