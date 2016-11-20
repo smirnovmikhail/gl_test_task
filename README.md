@@ -18,9 +18,9 @@ Notes:
 
 #Check questions:
 
-Q: What is cookstyle?
+**Q: What is cookstyle?**
 
-A: Most of the code that is authored when working with Chef is written as Ruby. Just about every file within a cookbook—with few exceptions!—is a Ruby file.
+**A:** Most of the code that is authored when working with Chef is written as Ruby. Just about every file within a cookbook—with few exceptions!—is a Ruby file.
 
 cookstyle is a linting tool based on RuboCop designed to address the following issues:
 
@@ -35,14 +35,14 @@ cookstyle addresses these issues by:
 When a new version of RuboCop is released, an automated process disables new style rules in the default configuration.
 
 
-** Q: What is Berkshelf? **
+**Q: What is Berkshelf?**
 
-A: Berkshelf is a dependency manager for certain cookbook workflows that is included in the Chef development kit.
+**A:** Berkshelf is a dependency manager for certain cookbook workflows that is included in the Chef development kit.
 
-** Q: Berkshelf commands to:
-   - Create cookbook **
-A:
+**Q: Berkshelf commands to:**
+   **- Create cookbook**
 
+**A:**
 ```
  $ berks cookbook new_application
 
