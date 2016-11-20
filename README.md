@@ -48,19 +48,45 @@ When a new version of RuboCop is released, an automated process disables new sty
 
 ```
 
-- What is Vagrant?
-- What's Vagrant providers and provisioners?
-- What Vagrant comands to:
-** - run machine. **
-** - cleanup vagrant workspace ( reset space to blank ) ** 
-** - reprovision already running machine. **
-** - What is project name that's supports images for test kitchen **
+**Q: - What is Vagrant?**
+
+**A:** Vagrant is an open-source software product for building and maintaining portable virtual development environments. The core idea behind its creation lies in the fact that the environment maintenance becomes increasingly difficult in a large project with multiple technical stacks. Vagrant manages all the necessary configurations for the developers in order to avoid the unnecessary maintenance and setup time, and increases development productivity.
+
+**Q:- What's Vagrant providers and provisioners?**
+
+
+*Provisioners* in Vagrant allow you to automatically install software, alter configurations, and more on the machine as part of the `vagrant up` process.
+
+This is useful since boxes typically are not built perfectly for your use case. Using the provisioning systems built-in to Vagrant, it automates the process so that it is repeatable. Most importantly, it requires no human interaction, so you can vagrant destroy and vagrant up and have a fully ready-to-go work environment with a single command.
+
+
+**A:**
+
+
+**Q: - What Vagrant comands to:**
+**- run machine.**
+**A:**
+```
+vagrant up
+```
+**Q: - cleanup vagrant workspace ( reset space to blank )** 
+**A:**
+```
+vagrant destroy
+```
+**Q: - reprovision already running machine.**
+**A:**
+``` 
+vagrant reload --provision
+```
+
+**- What is project name that's supports images for test kitchen**
 
  Bento
 
-** - What's Chef resource? **
+**- What's Chef resource?**
 
-A resource is a statement of configuration policy that:
+**A:** resource is a statement of configuration policy that:
 
     Describes the desired state for a configuration item
     Declares the steps needed to bring that item to the desired state
@@ -70,11 +96,11 @@ A resource is a statement of configuration policy that:
 
 Where a resource represents a piece of the system (and its desired state), a provider defines the steps that are needed to bring that piece of the system from its current state into the desired state.
 
-** - What's Chef resource you're used in your cookbook. **
+**- What's Chef resource you're used in your cookbook.**
 
 user, group, file
 
-** - How much time it takes to: **
+**- How much time it takes to:**
     - bring machine up for the first time.
     - Re-provision machine.
     - destroy machine.
