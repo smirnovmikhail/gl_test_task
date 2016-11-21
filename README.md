@@ -54,27 +54,31 @@ When a new version of RuboCop is released, an automated process disables new sty
 
 **Q:- What's Vagrant providers and provisioners?**
 
+**A:** *Providers.* While Vagrant ships out of the box with support for `VirtualBox`, `Hyper-V`, and `Docker`, Vagrant has the ability to manage other types of machines as well. This is done by using other providers with Vagrant.
+
+Alternate providers can offer different features that make more sense in your use case. For example, if you are using Vagrant for any real work, VMware providers are recommended since they're well supported and generally more stable and performant than VirtualBox.
+
 
 *Provisioners* in Vagrant allow you to automatically install software, alter configurations, and more on the machine as part of the `vagrant up` process.
 
 This is useful since boxes typically are not built perfectly for your use case. Using the provisioning systems built-in to Vagrant, it automates the process so that it is repeatable. Most importantly, it requires no human interaction, so you can vagrant destroy and vagrant up and have a fully ready-to-go work environment with a single command.
 
-
-**A:**
-
-
 **Q: - What Vagrant comands to:**
+
 **- run machine.**
+
 **A:**
 ```
 vagrant up
 ```
 **Q: - cleanup vagrant workspace ( reset space to blank )** 
+
 **A:**
 ```
 vagrant destroy
 ```
 **Q: - reprovision already running machine.**
+
 **A:**
 ``` 
 vagrant reload --provision
@@ -101,10 +105,19 @@ Where a resource represents a piece of the system (and its desired state), a pro
 user, group, file
 
 **- How much time it takes to:**
-    - bring machine up for the first time.
-    - Re-provision machine.
-    - destroy machine.
-- Explain, Why above times differ?
+    **- bring machine up for the first time.**
+
+        1 min 55 sec
+
+    **- Re-provision machine.**
+
+	1 min 45 sec
+
+    **- destroy machine.**
+
+	7 seconds
+
+- Explain, Why above times differ?**
 
 Links to read:
 - https://www.vagrantup.com/docs/provisioning/
