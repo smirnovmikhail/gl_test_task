@@ -1,6 +1,5 @@
 Please find chef task #1 below.
 
-#1
 - Bring up vagrant machine with OS Centos 6.x with installed chef-client
 - Create user/group "devops".
 - Put file /opt/hello, with content "Hello DevOps!" with permissions to r/w for above user and group.
@@ -81,12 +80,12 @@ vagrant destroy
 
 **A:**
 ``` 
-vagrant reload --provision
+vagrant provision
 ```
 
 **- What is project name that's supports images for test kitchen**
 
- Bento
+**A:** Bento
 
 **- What's Chef resource?**
 
@@ -105,19 +104,23 @@ Where a resource represents a piece of the system (and its desired state), a pro
 user, group, file
 
 **- How much time it takes to:**
+
     **- bring machine up for the first time.**
 
         1 min 55 sec
 
     **- Re-provision machine.**
 
-	1 min 45 sec
+	11 seconds
 
     **- destroy machine.**
 
 	7 seconds
 
-- Explain, Why above times differ?**
+**- Explain, Why above times differ?**
+
+**A:** Reprovision doesn't create and configure guest machines according to your Vagrantfile, so it is faster
+
 
 Links to read:
 - https://www.vagrantup.com/docs/provisioning/
