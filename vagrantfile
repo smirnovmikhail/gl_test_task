@@ -3,6 +3,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.network :private_network, type: 'dhcp'
   config.vm.provision "chef_solo" do |chef|
+    chef.cookbooks_path = "./"
     chef.node_name = "task1"
     chef.add_recipe "task1"
   end
